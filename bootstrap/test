@@ -1,0 +1,5 @@
+select jh.Department, p.Employee_ID, p.First_Name, p.Last_Name, 
+     p.Gender, p.Ethnicity, b.Deductable, e.Employment_Status
+     from Personal p inner join Job_History jh on p.Employee_ID = jh.Employee_ID
+     inner join Employment e on p.Employee_ID = e.Employee_ID 
+     inner join Benefit_Plans b on p.Benefit_Plans = b.Benefit_Plan_ID
