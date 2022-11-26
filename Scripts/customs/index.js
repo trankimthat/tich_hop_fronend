@@ -1,6 +1,6 @@
 let dataArr = [];
 const getDataEmployee = async () => {
-  const res = await fetch('http://localhost:3001/payrollemployees');
+  const res = await fetch('http://localhost:3001/total-earning');
   const data = await res.json();
   dataArr = data?.data;
 };
@@ -11,3 +11,4 @@ const main = async () => {
 };
 
 main();
+
